@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMovies } from "../redux/movieSlice";
 import "./Home.css";
+import Search from "./Search";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -10,11 +11,11 @@ const Home = () => {
   useEffect(() => {
     dispatch(fetchMovies());
   }, [dispatch]);
-
+console.log(movies);
   return (
     <div className="home">
       <header className="home-header">
-        <h1>Netflix Clone</h1>
+        <Search/>
       </header>
       {loading && <p>Loading movies...</p>}
       {error && <p className="error">{error}</p>}

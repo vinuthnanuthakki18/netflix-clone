@@ -14,7 +14,17 @@
     font-size: 2rem;
     margin-bottom: 20px;
   }
-  
+  .search-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .search-img{
+    height: 50px;
+    width: 70px;
+    cursor: pointer;
+  }
+
   .search form {
     display: flex;
     align-items: center;

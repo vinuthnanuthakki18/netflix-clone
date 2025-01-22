@@ -3,19 +3,16 @@ import { getAuth } from "firebase/auth";
 
 // Firebase configuration from environment variables
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
-  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
+  apiKey: "AIzaSyD8CIi1ts4SLTBWZYbQyH20my-tMCeD8Wk",
+  authDomain: "netflix-clone-ed8f6.firebaseapp.com",
+  projectId: "netflix-clone-ed8f6",
+  storageBucket: "netflix-clone-ed8f6.firebasestorage.app",
+  messagingSenderId: "117632792385",
+  appId: "1:117632792385:web:905aba7ffe354ee3bbd3c0",
+  measurementId: "G-C76H2JP504"
 };
 
 // Initialize Firebase
+console.log(firebaseConfig.projectId);
 const app = initializeApp(firebaseConfig);
-
-// Get Firebase Authentication instance
-const auth = getAuth(app);
-
-export { auth };
+export const auth = getAuth(app);

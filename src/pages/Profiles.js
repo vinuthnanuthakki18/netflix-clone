@@ -17,7 +17,7 @@ const Profiles = () => {
             onClick={() => navigate("/home")}
           >
             <img
-              src="https://via.placeholder.com/150"
+              src={`/images/Netflix-avatar${index}.jpg`}
               alt="Profile"
             />
             <h2>{profile}</h2>

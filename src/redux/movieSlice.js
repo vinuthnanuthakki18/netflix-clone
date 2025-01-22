@@ -1,7 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
+const API_KEY = "8fe2e5755cbe187e49de92de6fa7db9d";
+console.log("API Key:", API_KEY);
 
 // Fetch popular movies
 export const fetchMovies = createAsyncThunk("movies/fetchMovies", async (_, { rejectWithValue }) => {
@@ -9,6 +10,7 @@ export const fetchMovies = createAsyncThunk("movies/fetchMovies", async (_, { re
     const response = await axios.get(
       `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
     );
+    console.log("API Response:", response);
     return response.data.results;
   } catch (error) {
     return rejectWithValue(error.response?.data || "Failed to fetch movies");

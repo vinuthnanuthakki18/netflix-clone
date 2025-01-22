@@ -18,7 +18,10 @@ const Search = () => {
   return (
     <div className="search">
       <header className="search-header">
+        <div className="search-head">
+          <img src="/images/netflix-symbol1.png" alt="" className='search-img'onClick={()=>window.location.reload()}/>
         <h1>Search Movies</h1>
+        </div>
         <form onSubmit={handleSearch}>
           <input
             type="text"
