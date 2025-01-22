@@ -5,6 +5,7 @@ import { store } from "./redux/store";
 import App from "./App";
 import "./index.css";
 
+// Ensure the correct import for React 18
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
