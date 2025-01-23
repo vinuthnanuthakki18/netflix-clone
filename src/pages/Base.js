@@ -19,7 +19,7 @@ function Base() {
             </div>
             <div className="input-base">
             <input type="email" placeholder="Email address" required className='base-input-form'/>
-            <button className="sigup-btn" onClick={navigate("/signup")}>Get Started</button>
+            <a href="/signup" className="sigup-btn">Sign up</a>
             </div>
         </div>
       </div>
